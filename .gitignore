@@ -12,3 +12,6 @@ node_modules/
 # 发布产物（用 git bundle 生成，不进仓库）
 dsh-pet-venti.bundle
 
+_*.out
+_*.err
+
