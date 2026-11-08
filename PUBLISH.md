@@ -4,7 +4,7 @@
 
 ```bash
 cd dsh-pet-venti
-git remote add origin https://github.com/<你的用户名>/dsh-pet-venti.git
+git remote add origin https://github.com/CrazyHao/dsh-pet-venti.git
 git branch -M main
 git push -u origin main
 ```
@@ -20,7 +20,7 @@ git push -u origin main
 2. DSH → 设置 → 插件 → **添加插件**，填 Git 地址：
 
    ```
-   https://github.com/<你的用户名>/dsh-pet-venti
+   https://github.com/CrazyHao/dsh-pet-venti
    ```
 
    （也可以填本地目录、tarball，或先 clone 再选目录）

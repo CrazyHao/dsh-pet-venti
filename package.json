@@ -18,11 +18,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/<your-name>/dsh-pet-venti.git"
+    "url": "git+https://github.com/CrazyHao/dsh-pet-venti.git"
   },
-  "homepage": "https://github.com/<your-name>/dsh-pet-venti#readme",
+  "homepage": "https://github.com/CrazyHao/dsh-pet-venti#readme",
   "bugs": {
-    "url": "https://github.com/<your-name>/dsh-pet-venti/issues"
+    "url": "https://github.com/CrazyHao/dsh-pet-venti/issues"
   },
   "engines": {
     "node": ">=22"
