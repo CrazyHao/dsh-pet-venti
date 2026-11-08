@@ -1,0 +1,10 @@
+# 本机运行时产物，不进仓库
+paths.json
+state.json
+audio/
+_tmp/
+_models/
+*.log
+*.pyc
+__pycache__/
+node_modules/

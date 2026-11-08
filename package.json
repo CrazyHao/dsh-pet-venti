@@ -1,0 +1,65 @@
+{
+  "name": "dsh-pet-venti",
+  "version": "2.0.0",
+  "type": "module",
+  "description": "温迪版桌宠：人设 + 114 个动作名皮肤 + IndexTTS 声音 + 屏幕/麦克风感知吐槽（配合 dsh-pet 使用）。",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh-pet",
+    "cordis",
+    "tts",
+    "indextts",
+    "voice-clone",
+    "genshin",
+    "venti"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<your-name>/dsh-pet-venti.git"
+  },
+  "homepage": "https://github.com/<your-name>/dsh-pet-venti#readme",
+  "bugs": {
+    "url": "https://github.com/<your-name>/dsh-pet-venti/issues"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "adapter.py",
+    "sense_screen.py",
+    "sense_mic.py",
+    "pet_caption.py",
+    "watch.cmd",
+    "watch.py",
+    "setup.ps1",
+    "animations.json",
+    "assets/webm/*.webm",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": { "platform": "web" },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.1-rc.3": "unknown",
+        "0.2.2-alpha.2": "unknown",
+        "0.2.2-rc.1": "compatible"
+      }
+    }
+  }
+}
