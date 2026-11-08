@@ -3,6 +3,7 @@
 让 DSH 桌宠变成「温迪」：人设、皮肤、声音、眼睛和耳朵，一个插件装好。
 
 > 需要先装好 **DSH** 和 **dsh-pet**（本插件复用 dsh-pet 的窗口、气泡和语音槽位）。
+<img width="222" height="279" alt="image" src="https://github.com/user-attachments/assets/e712b084-c9b3-4e0c-b35d-f0bde7057f48" />
 
 ## 它做什么
 
