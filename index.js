@@ -29,7 +29,13 @@ const PATHS = {
   ttsVenv: join(DEFAULT_ROOT, 'src', 'index-tts-main', '.venv'),
   adapter: join(DEFAULT_ROOT, 'indextts', 'adapter.py'),
 }
-try { Object.assign(PATHS, JSON.parse(readFileSync(join(PLUGIN_DIR, 'paths.json'), 'utf8'))) } catch { /* 用默认 */ }
+// 安装环境的位置：优先用户目录（跨插件升级稳定），其次插件目录（本地开发）
+for (const p of [
+  join(process.env.DSH_HOME || join(homedir(), '.dsh'), 'pet-venti', 'paths.json'),
+  join(PLUGIN_DIR, 'paths.json'),
+]) {
+  try { Object.assign(PATHS, JSON.parse(readFileSync(p, 'utf8'))) } catch { /* 下一个 */ }
+}
 const ENV_ROOT = PATHS.envRoot
 const PY_TOOLS = join(PATHS.toolsVenv, 'Scripts', 'python.exe')
 const PY_TOOLS_W = join(PATHS.toolsVenv, 'Scripts', 'pythonw.exe')

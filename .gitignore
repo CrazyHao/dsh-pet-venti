@@ -8,3 +8,7 @@ _models/
 *.pyc
 __pycache__/
 node_modules/
+
+# 发布产物（用 git bundle 生成，不进仓库）
+dsh-pet-venti.bundle
+
