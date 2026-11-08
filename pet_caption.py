@@ -130,6 +130,18 @@ class Caption(QWidget):
         if self._hwnd:
             u.SetWindowPos(wt.HWND(self._hwnd), ctypes.c_void_p(-1), int(x), int(y), 0, 0,
                            SWP_NOSIZE | SWP_NOACTIVATE)
+            # 只在位置变化时记一行，方便以后排查「跟没跟上」
+            if getattr(self, '_last_pos', None) != (x, y):
+                self._last_pos = (x, y)
+                try:
+                    import time
+                    p = os.path.join(HERE, 'caption.log')
+                    if os.path.isfile(p) and os.path.getsize(p) > 200_000:
+                        os.remove(p)
+                    with open(p, 'a', encoding='utf-8') as lf:
+                        lf.write('%s  x=%s y=%s  work=%s\n' % (time.strftime('%H:%M:%S'), x, y, work))
+                except Exception:
+                    pass
         else:
             self.move(int(x), int(y))
 
